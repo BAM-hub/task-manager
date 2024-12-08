@@ -1,11 +1,21 @@
 .container {
   padding-inline: 140px;
   margin: auto;
+  @media screen and (max-width: 768px) {
+    padding-inline: 15px;
+  }
 }
 
 .mainAppGrid {
+  height: 100vh;
   display: grid;
   grid-template:
-    "header header header"
-    "side content content";
+    "header header header" auto
+    "side content content" 1fr / minmax(200px, 260px) minmax(260px, 1fr) minmax(260px, 1fr);
+  @media screen and (max-width: 768px) {
+    grid-template:
+      "header" auto
+      "side" auto
+      "content" 1fr;
+  }
 }

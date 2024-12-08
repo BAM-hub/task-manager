@@ -1,5 +1,7 @@
 .header {
   grid-area: header;
+  padding-top: 16px;
+  padding-bottom: 19px;
 }
 
 .side {
@@ -7,5 +9,14 @@
 }
 
 .main {
+  padding-inline-start: 32px;
   grid-area: content;
+  @media screen and (max-width: 768px) {
+    padding-inline-start: unset;
+  }
+}
+
+.side,
+.main {
+  margin-bottom: 23px;
 }

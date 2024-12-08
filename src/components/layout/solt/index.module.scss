@@ -1,11 +1,11 @@
-.slot-header {
-  grid-area: a;
+.header {
+  grid-area: header;
 }
 
-.slot-side {
-  grid-area: a;
+.side {
+  grid-area: side;
 }
 
-.slot-main {
-  grid-area: a;
+.main {
+  grid-area: content;
 }

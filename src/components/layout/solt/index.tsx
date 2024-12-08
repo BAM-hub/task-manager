@@ -1,12 +1,13 @@
 import { PropsWithChildren } from "react";
-import styles from "../header/index.module.scss";
+import styles from "./index.module.scss";
 
 const index = ({
   children,
+  slot,
 }: PropsWithChildren<{
-  solt: "header" | "side" | "main";
+  slot: "header" | "side" | "main";
 }>) => {
-  return <div className={styles.slot}>{children}</div>;
+  return <div className={styles[slot]}>{children}</div>;
 };
 
 export default index;

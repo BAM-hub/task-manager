@@ -4,9 +4,9 @@ import Slot from "./components/layout/solt";
 function App() {
   return (
     <Layout>
-      <Slot solt="header">header</Slot>
-      <Slot solt="side">side</Slot>
-      <Slot solt="main">main</Slot>
+      <Slot slot="header">header</Slot>
+      <Slot slot="side">side</Slot>
+      <Slot slot="main">main</Slot>
     </Layout>
   );
 }

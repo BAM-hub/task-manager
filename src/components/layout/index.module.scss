@@ -6,6 +6,6 @@
 .mainAppGrid {
   display: grid;
   grid-template:
-    "a a a"
-    "b c c";
+    "header header header"
+    "side content content";
 }

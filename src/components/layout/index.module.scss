@@ -1,0 +1,11 @@
+.container {
+  padding-inline: 140px;
+  margin: auto;
+}
+
+.mainAppGrid {
+  display: grid;
+  grid-template:
+    "a a a"
+    "b c c";
+}

@@ -1,6 +1,9 @@
 .container {
   padding-inline: 140px;
   margin: auto;
+  @media screen and (max-width: 1200px) {
+    padding-inline: 70px;
+  }
   @media screen and (max-width: 768px) {
     padding-inline: 15px;
   }
@@ -17,5 +20,6 @@
       "header" auto
       "side" auto
       "content" 1fr;
+    height: unset;
   }
 }

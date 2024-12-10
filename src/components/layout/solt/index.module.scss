@@ -17,6 +17,7 @@
   overflow: auto;
   @media screen and (max-width: 768px) {
     padding-inline-start: unset;
+    overflow: unset;
   }
 }
 

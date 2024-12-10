@@ -61,10 +61,12 @@ const Tasks = ({
         <div className={styles.taskInfoContainer}>
           <p>
             {task.taskName}
-            <div className={styles.tooltip}>
-              <ArrowIcon />
-              {task.description}
-            </div>
+            {task.description && (
+              <div className={styles.tooltip}>
+                <ArrowIcon />
+                {task.description}
+              </div>
+            )}
           </p>
           <div className={styles.tagsContainer}>
             {task.categories.map((category, index) => (

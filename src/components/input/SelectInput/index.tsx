@@ -13,6 +13,12 @@ const SearchInput = ({ categories, value, onChange }: SelectInputProps) => {
   }, [text, categories]);
   return (
     <div
+      onBlur={(e) => {
+        const isChild = e.target.contains(document.activeElement);
+        if (isChild) return;
+        setActive(false);
+        setText("");
+      }}
       onFocus={() => {
         setActive(true);
       }}
@@ -37,13 +43,7 @@ const SearchInput = ({ categories, value, onChange }: SelectInputProps) => {
           value={text}
         />
       </div>
-      <div
-        onBlur={() => {
-          setActive(false);
-          setText("");
-        }}
-        className={classNames(styles.dropDown, active && styles.active)}
-      >
+      <div className={classNames(styles.dropDown, active && styles.active)}>
         {filterdResult.map((category, index) => (
           <div
             tabIndex={1}

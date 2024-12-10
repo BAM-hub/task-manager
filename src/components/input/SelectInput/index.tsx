@@ -12,17 +12,12 @@ const SearchInput = ({ categories, value, onChange }: SelectInputProps) => {
     return fuzzy.filter(text, categories).map((value) => value.original);
   }, [text, categories]);
   return (
-    <>
-      <div
-        onFocus={() => {
-          setActive(true);
-        }}
-        onBlur={() => {
-          setActive(false);
-          setText("");
-        }}
-        className={styles.resultContainer}
-      >
+    <div
+      onFocus={() => {
+        setActive(true);
+      }}
+    >
+      <div className={styles.resultContainer}>
         {value.map((name, index) => (
           <Tag
             name={name}
@@ -42,7 +37,13 @@ const SearchInput = ({ categories, value, onChange }: SelectInputProps) => {
           value={text}
         />
       </div>
-      <div className={classNames(styles.dropDown, active && styles.active)}>
+      <div
+        onBlur={() => {
+          setActive(false);
+          setText("");
+        }}
+        className={classNames(styles.dropDown, active && styles.active)}
+      >
         {filterdResult.map((category, index) => (
           <div
             tabIndex={1}
@@ -74,7 +75,7 @@ const SearchInput = ({ categories, value, onChange }: SelectInputProps) => {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

@@ -64,7 +64,12 @@ function App() {
       <Slot slot="main">
         {filterdtasks.map((task) => (
           <Card key={task.id}>
-            <Tasks task={task} tasks={tasks} setTasks={setTasks} />
+            <Tasks
+              categories={CATEGORIES}
+              task={task}
+              tasks={tasks}
+              setTasks={setTasks}
+            />
           </Card>
         ))}
       </Slot>

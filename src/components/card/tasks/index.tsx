@@ -14,7 +14,9 @@ const Tasks = ({
   task,
   tasks,
   setTasks,
+  categories,
 }: {
+  categories: string[];
   task: TaskType;
   tasks: TaskType[];
   setTasks: Dispatch<SetStateAction<TaskType[]>>;
@@ -88,6 +90,8 @@ const Tasks = ({
       </div>
       <Modal ref={editTaskRef}>
         <Form
+          categories={categories}
+          close={() => editTaskRef.current?.close()}
           defaultState={task}
           title="Edit Task"
           handleSubmit={handleSubmit}

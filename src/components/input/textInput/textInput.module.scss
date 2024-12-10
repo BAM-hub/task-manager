@@ -1,0 +1,15 @@
+.textInput {
+  border: 1px solid #ebecfb;
+  border-radius: 6px;
+  width: 100%;
+  padding: 14px;
+}
+.invalid {
+  border-color: red;
+}
+.danger {
+  margin-inline-start: 8px;
+  display: block;
+  font-size: 10px;
+  color: red;
+}

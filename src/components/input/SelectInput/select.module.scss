@@ -1,0 +1,41 @@
+.dropDown {
+  transition: all 300ms ease;
+  pointer-events: none;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  background-color: white;
+  padding: 12px;
+  &.active,
+  &:focus-within {
+    pointer-events: all;
+    opacity: 1;
+  }
+  .selectItem {
+    user-select: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+}
+.resultContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-height: 48px;
+  border: 1px solid #ebecfb;
+  border-radius: 6px;
+  width: 100%;
+  padding: 14px;
+  input {
+    border: none;
+    width: 100%;
+    &:focus {
+      outline: unset;
+      border: unset;
+    }
+  }
+}

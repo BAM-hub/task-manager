@@ -1,0 +1,77 @@
+.statusContainer {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border-radius: 8px;
+  padding: 6px 8px;
+}
+.complete {
+  color: #0a7900;
+  svg {
+    path {
+      stroke: #0a7900;
+    }
+  }
+  background-color: #e1ffde;
+}
+.incomplete {
+  color: #ff6b00;
+  svg {
+    path {
+      stroke: #ff6b00;
+    }
+  }
+  background-color: #fff2de;
+}
+.dropdown {
+  z-index: 15;
+  transition: all 300ms ease;
+  pointer-events: none;
+  opacity: 0;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  padding: 8px;
+  display: grid;
+  gap: 4px;
+  border-radius: 8px;
+  &.active {
+    pointer-events: all;
+    opacity: 1;
+  }
+}
+.statusItem {
+  align-items: center;
+  display: flex;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #000000;
+  padding: 4px;
+  border-radius: 4px;
+  &:hover {
+    outline: 1px solid #395bd3;
+  }
+}
+.orange,
+.green {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+}
+.orange {
+  background-color: #ff6b00;
+}
+.green {
+  background-color: #0a7900;
+}
+.backdrop {
+  z-index: 10;
+  position: absolute;
+  inset: 0;
+}

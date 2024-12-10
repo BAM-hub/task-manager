@@ -11,6 +11,10 @@
 .main {
   padding-inline-start: 32px;
   grid-area: content;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow: auto;
   @media screen and (max-width: 768px) {
     padding-inline-start: unset;
   }
